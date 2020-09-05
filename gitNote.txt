@@ -1,0 +1,21 @@
+在某个目录下添加了版本库(.git本地仓库),那么这个目录就是工作区,
+Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区
+把文件添加到git版本库是分两步执行的:
+ 第一步是用git add把文件添加进去,实际上就是把文件修改添加到暂存区
+ 第二部是用git commit 提交更改,实际上就是把暂存区的所有内容提交到当前分支
+
+提交(同步)到远程仓库
+首先要提交到本地仓库然后才能同步到远程仓库
+Github支持两种同步方式https和ssh,使用https不需要配置就可以直接使用,但每次都要输入用户名和密码.
+如果使用ssh方式就需要客户端生成一个密钥对，即一个公钥一个私钥。然后还需要把公钥放到githib的服务器上。
+
+使用ssh协议同步
+ 在工作区目录下右键打开git操作命令框(Git Bash Here)
+ 执行 ssh-keygen -t rsa 命令生成公钥和私钥
+ 在C:\Users\Administrator\.ssh目录下查看生成的公钥和私钥
+ 打开github 点击Settings --> SSH and GPG keys --> New SSH key --> 复制id_rsa.pub文件内容添加进去
+ 同步到远程仓库暂存区
+ git remote add origin git@github.com:19892483978/mytest.git
+ 提交更改
+ git push -u origin master
+
