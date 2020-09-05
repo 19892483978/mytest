@@ -14,12 +14,7 @@ Github支持两种同步方式https和ssh,使用https不需要配置就可以直
  执行 ssh-keygen -t rsa 命令生成公钥和私钥
  在C:\Users\Administrator\.ssh目录下查看生成的公钥和私钥
  打开github 点击Settings --> SSH and GPG keys --> New SSH key --> 复制id_rsa.pub文件内容添加进去
- 同步到远程仓库暂存区
+ 同步到远程仓库暂存区,只需要同步一次
  git remote add origin git@github.com:19892483978/mytest.git
- 提交更改
- git push -u origin master
-
-使用https协议同步
- git remote add origin https://github.com/19892483978/mytest.git
  提交更改
  git push -u origin master
