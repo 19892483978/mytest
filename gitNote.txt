@@ -19,3 +19,7 @@ Github支持两种同步方式https和ssh,使用https不需要配置就可以直
  提交更改
  git push -u origin master
 
+使用https协议同步
+ git remote add origin https://github.com/19892483978/mytest.git
+ 提交更改
+ git push -u origin master
